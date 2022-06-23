@@ -2,8 +2,9 @@ Steps to reproduce:
 
 1. Install deps: `poetry install`
 2. Start a shell in the virtualenv: `poetry shell`
-3. Run app with `uvicorn test:app --reload --port 8001`
-4. Sending request: `curl http://localhost:8001/`
+3. Start ray: `ray start --head`
+4. Run app with `uvicorn test:app --reload --port 8001`
+5. Sending request: `curl http://localhost:8001/`
 
 Error I get is:
 ```
