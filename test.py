@@ -7,7 +7,7 @@ app = FastAPI()
 ray.init(address='auto')
 serve.start(detached=True)
 
-@serve.deployment(route_prefi)
+@serve.deployment(route_prefix="/hello")
 class MyFastAPIDeployment:
     @app.get("/")
     def root(self):
